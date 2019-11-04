@@ -1,0 +1,11 @@
+.navbar {
+  background-color: #202020;
+  color: #ffffff;
+  margin-bottom: 2em;
+}
+.navbar a {
+  color: #fff;
+}
+.navbar a:hover {
+  color: #c0c0c0;
+}
