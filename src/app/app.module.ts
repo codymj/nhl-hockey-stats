@@ -5,6 +5,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 
+import {ViewsModule} from './views/views.module';
 import {NavigationModule} from './navigation/navigation.module';
 import {NewsModule} from './news/news.module';
 
@@ -16,6 +17,7 @@ import {NewsModule} from './news/news.module';
     BrowserModule,
     NgbModule,
     AppRoutingModule,
+    ViewsModule,
     NavigationModule,
     NewsModule
   ],
