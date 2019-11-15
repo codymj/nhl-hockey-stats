@@ -1,4 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -15,6 +16,7 @@ import {NewsModule} from './news/news.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     NgbModule,
     AppRoutingModule,
     ViewsModule,
