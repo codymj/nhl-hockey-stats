@@ -1,0 +1,8 @@
+.carousel-caption {
+  text-align: left;
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  left: auto;
+  right: auto;
+}
