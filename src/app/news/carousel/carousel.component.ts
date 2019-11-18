@@ -25,7 +25,7 @@ export class CarouselComponent implements OnInit {
       // Parse JSON into Article objects
       for (const article of res.articles) {
         let imgUrl = '';
-        if (article.images.length > 0 && article.images[0].width > article.images[0].height) {
+        if (article.images.length > 0 && article.images[0].width >= article.images[0].height * 1.5) {
           imgUrl = article.images[0].url;
         }
 
