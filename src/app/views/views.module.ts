@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {NewsModule} from '../news/news.module';
 
 import {HomeComponent} from './home/home.component';
+import {StandingsModule} from '../standings/standings.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import {HomeComponent} from './home/home.component';
   ],
   imports: [
     CommonModule,
-    NewsModule
+    NewsModule,
+    StandingsModule
   ]
 })
 export class ViewsModule { }
