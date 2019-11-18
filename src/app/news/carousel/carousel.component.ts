@@ -7,6 +7,7 @@ import {NewsService} from '../news.service';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
+  private fallbackImgUrl = 'https://i.imgur.com/ETAC3fC.jpg';
   private articles: [];
 
   constructor(private newsService: NewsService) { }
