@@ -13,27 +13,10 @@ export class CarouselComponent implements OnInit {
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
-    this.getArticles();
+    this.setArticles();
   }
 
-  // Parse the articles from news service
-  public getArticles() {
-    this.newsService.getNews().subscribe(res => {
-      // Clear array
-      this.articles = [];
-
-      // Parse JSON into Article objects
-      for (const article of res.articles) {
-        let imgUrl = '';
-        if (article.images.length > 0 && article.images[0].width >= article.images[0].height * 1.5) {
-          imgUrl = article.images[0].url;
-        }
-
-        const headline = article.headline;
-        const description = article.description;
-
-        this.articles.push(new Article(imgUrl, headline, description));
-      }
-    });
+  private setArticles(): void {
+    this.articles = this.newsService.getArticles();
   }
 }
