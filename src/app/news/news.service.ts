@@ -11,14 +11,7 @@ export class NewsService {
   constructor(private http: HttpClient) { }
 
   // Gets entire news JSON from endpoint
-  private getNews(): Observable<any> {
+  public getNews(): Observable<any> {
     return this.http.get(this.BASE_URL);
-  }
-
-  // Parse the articles and return
-  public getArticles() {
-    this.getNews().subscribe(res => {
-      return res.articles;
-    });
   }
 }
