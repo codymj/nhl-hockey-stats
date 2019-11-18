@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NewsService} from '../news.service';
+import {Article} from '../models/article.model';
 
 @Component({
   selector: 'app-carousel',
@@ -7,8 +8,7 @@ import {NewsService} from '../news.service';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-  private fallbackImgUrl = 'https://i.imgur.com/ETAC3fC.jpg';
-  private articles: [];
+  private articles: Article[];
 
   constructor(private newsService: NewsService) { }
 
@@ -19,7 +19,21 @@ export class CarouselComponent implements OnInit {
   // Parse the articles from news service
   public getArticles() {
     this.newsService.getNews().subscribe(res => {
-      this.articles = res.articles;
+      // Clear array
+      this.articles = [];
+
+      // Parse JSON into Article objects
+      for (const article of res.articles) {
+        let imgUrl = '';
+        if (article.images.length > 0 && article.images[0].width > article.images[0].height) {
+          imgUrl = article.images[0].url;
+        }
+
+        const headline = article.headline;
+        const description = article.description;
+
+        this.articles.push(new Article(imgUrl, headline, description));
+      }
     });
   }
 }
