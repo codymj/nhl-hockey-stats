@@ -9,6 +9,7 @@ import {AppComponent} from './app.component';
 import {ViewsModule} from './views/views.module';
 import {NavigationModule} from './navigation/navigation.module';
 import {NewsModule} from './news/news.module';
+import {StandingsModule} from './standings/standings.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {NewsModule} from './news/news.module';
     AppRoutingModule,
     ViewsModule,
     NavigationModule,
-    NewsModule
+    NewsModule,
+    StandingsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
