@@ -23,9 +23,13 @@ export class NewsService {
     this.getNews().subscribe(res => {
       // Parse JSON into Article objects
       for (const article of res.articles) {
+        const imgs = article.images;
         let imgUrl = '';
-        if (article.images.length > 0 && article.images[0].width >= article.images[0].height * 1.5) {
-          imgUrl = article.images[0].url;
+        for (const img of imgs) {
+          if (img.width / img.height >= 1.77) {
+            imgUrl = img.url;
+            break;
+          }
         }
 
         const headline = article.headline;
