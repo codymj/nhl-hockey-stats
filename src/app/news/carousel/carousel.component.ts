@@ -8,15 +8,35 @@ import {Article} from '../models/article.model';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-  private articles: Article[];
+  private articles = [];
 
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
-    this.setArticles();
+    this.getNews();
   }
 
-  private setArticles(): void {
-    this.articles = this.newsService.getArticles();
+  private getNews(): void {
+    this.newsService.getNews().subscribe((data) => {
+      this.parseArticles(data);
+    });
+  }
+
+  private parseArticles(data): void {
+    for (const article of data.articles) {
+      const imgs = article.images;
+      let imgUrl = '';
+      for (const img of imgs) {
+        if (img.width / img.height >= 1.77) {
+          imgUrl = img.url;
+          break;
+        }
+      }
+
+      const headline = article.headline;
+      const description = article.description;
+
+      this.articles.push(new Article(imgUrl, headline, description));
+    }
   }
 }

@@ -1,7 +1,7 @@
 export class Article {
-  private imgUrl: string;
-  private headline: string;
-  private description: string;
+  private readonly imgUrl: string;
+  private readonly headline: string;
+  private readonly description: string;
 
   constructor(imgUrl: string, headline: string, description: string) {
     this.imgUrl = imgUrl;
