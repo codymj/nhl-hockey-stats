@@ -17,15 +17,4 @@ export class StandingsService {
       return res;
     }));
   }
-
-  // Returns conference standings
-  /*public getByConferences() {
-    const conferences = [];
-    this.getStandings('byConference').subscribe(res => {
-      for (const conference of res.records) {
-        conferences.push(conference);
-      }
-    });
-    return conferences;
-  }*/
 }
