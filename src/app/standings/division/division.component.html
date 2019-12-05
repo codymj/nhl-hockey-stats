@@ -1,7 +1,7 @@
 <table *ngIf="standings.division && standings.teamRecords" class="table table-striped">
   <thead>
   <tr>
-    <th scope="col">{{ standings.division.nameShort }}</th>
+    <th scope="col">{{ standings.division.nameShort | uppercase | slice: 0:3 }}</th>
     <th scope="col">GP</th>
     <th scope="col">W</th>
     <th scope="col">L</th>
