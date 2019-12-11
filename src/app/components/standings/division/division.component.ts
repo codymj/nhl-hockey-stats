@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {StandingsService} from '../standings.service';
+import {StandingsService} from '../../../services/standings.service';
 
 @Component({
   selector: 'app-division',

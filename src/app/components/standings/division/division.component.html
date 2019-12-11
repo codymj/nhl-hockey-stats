@@ -12,7 +12,7 @@
   </thead>
   <tbody>
   <tr *ngFor="let team of standings.teamRecords">
-    <th scope="row">{{ idToAbbr(team.team.id) }}</th>
+    <th scope="row"><img src="../../../assets/img/team-logos/{{idToAbbr(team.team.id)}}.png" width="32px"></th>
     <td>{{ team["gamesPlayed"] }}</td>
     <td>{{ team.leagueRecord.wins }}</td>
     <td>{{ team.leagueRecord.losses }}</td>

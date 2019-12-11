@@ -7,9 +7,9 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 
 import {ViewsModule} from './views/views.module';
-import {NavigationModule} from './navigation/navigation.module';
-import {NewsModule} from './news/news.module';
-import {StandingsModule} from './standings/standings.module';
+import {NavigationModule} from './components/navigation/navigation.module';
+import {NewsModule} from './components/news/news.module';
+import {StandingsModule} from './components/standings/standings.module';
 
 @NgModule({
   declarations: [
