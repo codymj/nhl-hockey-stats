@@ -1,0 +1,9 @@
+div {
+  padding-left: 0;
+  overflow-x: scroll;
+  margin-bottom: 1em;
+}
+li {
+  padding: 1em;
+  border: black solid 1px;
+}

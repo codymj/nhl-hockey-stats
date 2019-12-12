@@ -1,0 +1,19 @@
+table {
+  height: 6em;
+  margin-bottom: 0;
+}
+table td, table th {
+  border: none !important;
+}
+table tr td a {
+  text-decoration: none;
+}
+table td {
+  text-align: center;
+}
+#status {
+  text-align: center;
+}
+#at {
+  font-size: x-large;
+}

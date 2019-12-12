@@ -10,6 +10,7 @@ import {ViewsModule} from './views/views.module';
 import {NavigationModule} from './components/navigation/navigation.module';
 import {NewsModule} from './components/news/news.module';
 import {StandingsModule} from './components/standings/standings.module';
+import {ScheduleModule} from './components/schedule/schedule.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {StandingsModule} from './components/standings/standings.module';
     ViewsModule,
     NavigationModule,
     NewsModule,
-    StandingsModule
+    StandingsModule,
+    ScheduleModule
   ],
   providers: [],
   exports: [
