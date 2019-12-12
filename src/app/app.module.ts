@@ -10,12 +10,10 @@ import {ViewsModule} from './views/views.module';
 import {NavigationModule} from './components/navigation/navigation.module';
 import {NewsModule} from './components/news/news.module';
 import {StandingsModule} from './components/standings/standings.module';
-import {ScheduleComponent} from './components/schedule/schedule.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScheduleComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +26,8 @@ import {ScheduleComponent} from './components/schedule/schedule.component';
     StandingsModule
   ],
   providers: [],
+  exports: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
