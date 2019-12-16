@@ -1,15 +1,16 @@
 <div class="container">
-    <!-- Today's schedule -->
     <div class="row">
+        <!-- Today's schedule -->
         <div class="col-lg-12">
             <app-main-schedule></app-main-schedule>
         </div>
     </div>
-    <!-- News and Standings -->
     <div class="row">
+        <!-- News -->
         <div class="col-lg-8">
             <app-carousel></app-carousel>
         </div>
+        <!-- Standings -->
         <div class="col-lg-4">
             <app-division [division]="'atlantic'"></app-division>
             <app-division [division]="'metro'"></app-division>
