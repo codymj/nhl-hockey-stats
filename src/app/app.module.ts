@@ -14,7 +14,7 @@ import {ScheduleModule} from './components/schedule/schedule.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
