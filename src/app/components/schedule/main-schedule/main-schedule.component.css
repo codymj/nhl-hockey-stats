@@ -1,9 +1,12 @@
 div {
-  padding-left: 0;
   overflow-x: scroll;
   margin-bottom: 1em;
+  width: 100%;
+}
+.list-group {
+  padding-right: 0;
 }
 li {
-  padding: 1em;
-  border: black solid 1px;
+  padding: 5px 15px 5px 5px;
+  border-width: 0;
 }

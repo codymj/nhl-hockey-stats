@@ -20,6 +20,5 @@ export class MainScheduleComponent implements OnInit {
   // Extract games from the schedule data
   private parseGames(data): void {
     this.games = data.dates[0].games;
-    console.log(this.games);
   }
 }

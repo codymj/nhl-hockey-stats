@@ -1,18 +1,22 @@
 table {
-  height: 6em;
+  font-size: 15px;
   margin-bottom: 0;
 }
 table td, table th {
-  border: none !important;
+  border-top: none !important;
 }
 table tr td a {
   text-decoration: none;
 }
-table td {
+table tr td a:hover {
+  text-decoration: none;
+}
+td {
   text-align: center;
 }
-#status {
-  text-align: center;
+td p {
+  padding: 0;
+  margin: 0;
 }
 #at {
   font-size: x-large;
