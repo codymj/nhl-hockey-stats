@@ -1,3 +1,6 @@
+.carousel-inner {
+  height: 35em;
+}
 .carousel-caption {
   text-align: left;
   background-color: #fff;
@@ -5,4 +8,6 @@
   position: relative;
   left: auto;
   right: auto;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
