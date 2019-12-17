@@ -1,0 +1,22 @@
+<table *ngIf="gameData" class="table table-sm">
+  <thead></thead>
+  <tbody>
+  <tr>
+    <td><img src="../../../assets/img/team-logos/{{awayTeam}}.png" width="32px" alt="{{awayTeam}}"></td>
+    <td *ngIf="awayScore > homeScore; else awayLoss"><b>{{awayScore}}</b></td>
+    <ng-template #awayLoss>
+      <td>{{awayScore}}</td>
+    </ng-template>
+  </tr>
+  <tr>
+    <td><img src="../../../assets/img/team-logos/{{homeTeam}}.png" width="32px" alt="{{homeTeam}}"></td>
+    <td *ngIf="homeScore > awayScore; else homeLoss"><b>{{homeScore}}</b></td>
+    <ng-template #homeLoss>
+      <td>{{homeScore}}</td>
+    </ng-template>
+  </tr>
+  <tr>
+    <td id="status" colspan="3">{{gameState}}</td>
+  </tr>
+  </tbody>
+</table>
