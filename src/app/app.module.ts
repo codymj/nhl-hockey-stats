@@ -11,6 +11,7 @@ import {NavigationModule} from './components/navigation/navigation.module';
 import {NewsModule} from './components/news/news.module';
 import {StandingsModule} from './components/standings/standings.module';
 import {ScheduleModule} from './components/schedule/schedule.module';
+import {LeaderboardModule} from './components/leaderboard/leaderboard.module';
 
 @NgModule({
   declarations: [
@@ -25,11 +26,11 @@ import {ScheduleModule} from './components/schedule/schedule.module';
     NavigationModule,
     NewsModule,
     StandingsModule,
-    ScheduleModule
+    ScheduleModule,
+    LeaderboardModule
   ],
   providers: [],
-  exports: [
-  ],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
