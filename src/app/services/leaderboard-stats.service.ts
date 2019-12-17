@@ -46,4 +46,15 @@ export class LeaderboardStatsService {
       return res;
     }));
   }
+
+  // Returns rookie leaderboard stats for a season
+  // mode: 'points', 'goals' or 'assists'
+  // season: In format '20192020'
+  public getRookieLeaderboard(mode: string, season: string): Observable<any> {
+    const attr = 'skaters/' + mode + '?cayenneExp=season=' + season +
+      '%20and%20gameType=2%20and%20isRookie%20=%20%27Y%27';
+    return this.http.get(this.BASE_URL + attr).pipe(map(res => {
+      return res;
+    }));
+  }
 }
