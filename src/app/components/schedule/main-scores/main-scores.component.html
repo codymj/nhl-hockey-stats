@@ -1,1 +1,9 @@
-<p>main-scores works!</p>
+<div *ngIf="games.length > 0">
+  <div id="scoresView" class="d-flex align-items-center">
+    <ul class="col-10 list-group list-group-horizontal">
+      <li *ngFor="let game of games" class="list-group-item">
+        <app-score-element [gameData]="game"></app-score-element>
+      </li>
+    </ul>
+  </div>
+</div>

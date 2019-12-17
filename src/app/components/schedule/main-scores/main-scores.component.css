@@ -1,0 +1,15 @@
+#scoresView {
+  overflow-x: auto;
+  margin-bottom: 1em;
+  width: 100%;
+}
+.list-group {
+  padding-left: 0;
+}
+.list-group-item {
+  padding-left: 0;
+  padding-right: 3em;
+}
+li {
+  border-width: 0;
+}
