@@ -8,17 +8,17 @@
 <div class="tab-content" [id]="type+'_content'">
   <div class="tab-pane fade show active" [id]="type+statALabel+'link'" role="tabpanel" [attr.aria-labelledby]="type+statALabel">
     <ol>
-      <li *ngFor="let player of statAData">{{ player['player']['fullName'] }}</li>
+      <li *ngFor="let player of statAData">{{ player['player']['fullName'] + ' (' + player[statALabel] + ')'}}</li>
     </ol>
   </div>
   <div class="tab-pane fade" [id]="type+statBLabel+'link'" role="tabpanel" [attr.aria-labelledby]="type+statBLabel">
     <ol>
-      <li *ngFor="let player of statBData">{{ player['player']['fullName'] }}</li>
+      <li *ngFor="let player of statBData">{{ player['player']['fullName'] + ' (' + player[statBLabel] + ')'}}</li>
     </ol>
   </div>
   <div class="tab-pane fade" [id]="type+statCLabel+'link'" role="tabpanel" [attr.aria-labelledby]="type+statCLabel">
     <ol>
-      <li *ngFor="let player of statCData">{{ player['player']['fullName'] }}</li>
+      <li *ngFor="let player of statCData">{{ player['player']['fullName'] + ' (' + player[statCLabel] + ')'}}</li>
     </ol>
   </div>
 </div>

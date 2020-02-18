@@ -33,21 +33,21 @@ export class LeaderboardElementComponent implements OnInit {
     // Points
     this.leaderboardStatsService.getSkaterLeaders(
       'points', CURRENT_SEASON).subscribe(data => {
-        this.statALabel = 'Points';
+        this.statALabel = 'points';
         this.statAData = data.data;
     });
 
     // Goals
     this.leaderboardStatsService.getSkaterLeaders(
       'goals', CURRENT_SEASON).subscribe(data => {
-        this.statBLabel = 'Goals';
+        this.statBLabel = 'goals';
         this.statBData = data.data;
     });
 
     // Assists
     this.leaderboardStatsService.getSkaterLeaders(
       'assists', CURRENT_SEASON).subscribe(data => {
-        this.statCLabel = 'Assists';
+        this.statCLabel = 'assists';
         this.statCData = data.data;
     });
   }
@@ -57,21 +57,21 @@ export class LeaderboardElementComponent implements OnInit {
     // Points
     this.leaderboardStatsService.getDefensemenLeaders(
       'points', CURRENT_SEASON).subscribe(data => {
-        this.statALabel = 'Points';
+        this.statALabel = 'points';
         this.statAData = data.data;
     });
 
     // Goals
     this.leaderboardStatsService.getDefensemenLeaders(
       'goals', CURRENT_SEASON).subscribe(data => {
-        this.statBLabel = 'Goals';
+        this.statBLabel = 'goals';
         this.statBData = data.data;
     });
 
     // Assists
     this.leaderboardStatsService.getDefensemenLeaders(
       'assists', CURRENT_SEASON).subscribe(data => {
-        this.statCLabel = 'Assists';
+        this.statCLabel = 'assists';
         this.statCData = data.data;
     });
   }
@@ -81,21 +81,21 @@ export class LeaderboardElementComponent implements OnInit {
     // GAA
     this.leaderboardStatsService.getGoalieLeaders(
       'gaa', 30, CURRENT_SEASON).subscribe(data => {
-        this.statALabel = 'GAA';
+        this.statALabel = 'gaa';
         this.statAData = data.data;
     });
 
     // SV%
     this.leaderboardStatsService.getGoalieLeaders(
       'savePctg', 30, CURRENT_SEASON).subscribe(data => {
-        this.statBLabel = 'SVPct';
+        this.statBLabel = 'savePctg';
         this.statBData = data.data;
     });
 
     // Shutouts
     this.leaderboardStatsService.getGoalieLeaders(
       'shutouts', 30, CURRENT_SEASON).subscribe(data => {
-        this.statCLabel = 'Shutouts';
+        this.statCLabel = 'shutouts';
         this.statCData = data.data;
     });
   }
@@ -105,21 +105,21 @@ export class LeaderboardElementComponent implements OnInit {
     // Points
     this.leaderboardStatsService.getRookieLeaders(
       'points', CURRENT_SEASON).subscribe(data => {
-        this.statALabel = 'Points';
+        this.statALabel = 'points';
         this.statAData = data.data;
     });
 
     // Goals
     this.leaderboardStatsService.getRookieLeaders(
       'goals', CURRENT_SEASON).subscribe(data => {
-        this.statBLabel = 'Goals';
+        this.statBLabel = 'goals';
         this.statBData = data.data;
     });
 
     // Assists
     this.leaderboardStatsService.getRookieLeaders(
       'assists', CURRENT_SEASON).subscribe(data => {
-        this.statCLabel = 'Assists';
+        this.statCLabel = 'assists';
         this.statCData = data.data;
     });
   }
