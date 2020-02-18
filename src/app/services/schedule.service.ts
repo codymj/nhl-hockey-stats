@@ -7,7 +7,7 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ScheduleService {
-  private BASE_URL = 'https://statsapi.web.nhl.com/api/v1/schedule';
+  private BASE_URL = 'https://statsapi.web.nhl.com/api/v1/schedule?expand=schedule.linescore';
 
   constructor(private http: HttpClient) { }
 
@@ -20,21 +20,21 @@ export class ScheduleService {
 
   // Returns schedule for a specified date (YYYY-MM-DD)
   public getScheduleByDate(date: string): Observable<any> {
-    return this.http.get(this.BASE_URL + '?date=' + date).pipe(map(res => {
+    return this.http.get(this.BASE_URL + '&date=' + date).pipe(map(res => {
       return res;
     }));
   }
 
   // Returns today's schedule for a specified team
   public getCurrentDayScheduleForTeam(teamId: number): Observable<any> {
-    return this.http.get(this.BASE_URL + '?teamId=' + teamId).pipe(map(res => {
+    return this.http.get(this.BASE_URL + '&teamId=' + teamId).pipe(map(res => {
       return res;
     }));
   }
 
   // Returns schedule for a specified date and team
   public getScheduleByDateAndTeam(date: string, teamId: number): Observable<any> {
-    return this.http.get(this.BASE_URL + '?date=' + date + '&teamId=' + teamId).pipe(map(res => {
+    return this.http.get(this.BASE_URL + '&date=' + date + '&teamId=' + teamId).pipe(map(res => {
         return res;
       }));
   }
